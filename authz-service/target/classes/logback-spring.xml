@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <!-- 日志存放位置 -->
+    <property name="logPath" value="D:/bamlog" />
+
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logPath}/bam.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 按时间分割 -->
+            <fileNamePattern>${logPath}/bam-%d{yyyy-MM-dd}_part%i.log</fileNamePattern>
+            <!-- 按大小分割 -->
+            <maxFileSize>100MB</maxFileSize>
+            <!-- 日志文件保留天数 -->
+            <maxHistory>60</maxHistory>
+            <!-- 限制日志文件大小，超出之后会先删除较旧的日志 -->
+            <totalSizeCap>20GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <charset>utf-8</charset>
+            <pattern>%d{HH:mm:ss.SSS}  %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="LogAudit" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logPath}/bam-authz.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 按时间分割 -->
+            <fileNamePattern>${logPath}/bam-authz-%d{yyyy-MM-dd}%i.log</fileNamePattern>
+            <!-- 按大小分割 -->
+            <maxFileSize>100MB</maxFileSize>
+            <!-- 日志文件保留天数 -->
+            <maxHistory>60</maxHistory>
+            <!-- 限制日志文件大小，超出之后会先删除较旧的日志 -->
+            <totalSizeCap>20GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <charset>utf-8</charset>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.bamboocloud.am.authz.dao" level="DEBUG" />
+
+    <logger name="com.bamboocloud.am.authz" level="INFO" additivity="false">
+        <appender-ref ref="LogAudit"/>
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>

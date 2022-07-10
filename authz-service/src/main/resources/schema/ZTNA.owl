@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.bamboocloud.com/ztna.owl#"
+     xml:base="http://www.bamboocloud.com/ztna.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.bamboocloud.com/ztna.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasAction">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#ActionHistory"/>
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#PolicyRule"/>
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Session"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasAttributeVariable -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasAttributeVariable">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Attribute"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#AttributeVariable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasCondition">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#PolicyRule"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#ExecuteCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasGroup">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Action"/>
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Entity"/>
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Session"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasHistory -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasHistory">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#PolicyRule"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#ActionHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasRule -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasRule">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Policy"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#PolicyRule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasSAttribute -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasSAttribute">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Subject"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#Attribute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasSCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasSCondition">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#ExecuteCondition"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#Attribute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasSECondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasSECondition">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#ExecuteCondition"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#Attribute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasSParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasSParent">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Subject"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasSubject -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasSubject">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#ActionHistory"/>
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#PolicyRule"/>
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Session"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasTAttribute -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasTAttribute">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Target"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#Attribute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasTCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasTCondition">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#ExecuteCondition"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#Attribute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasTParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasTParent">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Target"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#Target"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#hasTarget -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#hasTarget">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#ActionHistory"/>
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#PolicyRule"/>
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Session"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#Target"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#triggerEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.bamboocloud.com/ztna.owl#triggerEvent">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#PolicyRule"/>
+        <rdfs:range rdf:resource="http://www.bamboocloud.com/ztna.owl#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#decisionEffect -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bamboocloud.com/ztna.owl#decisionEffect">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Policy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#decisionStrategy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bamboocloud.com/ztna.owl#decisionStrategy">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#PolicyRule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#executeTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bamboocloud.com/ztna.owl#executeTime">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#ActionHistory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bamboocloud.com/ztna.owl#name">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Action"/>
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#AttributeVariable"/>
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Event"/>
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#sessionID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bamboocloud.com/ztna.owl#sessionID">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#Session"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bamboocloud.com/ztna.owl#value">
+        <rdfs:domain rdf:resource="http://www.bamboocloud.com/ztna.owl#AttributeVariable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#Action -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#Action">
+        <rdfs:comment>操作</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#ActionHistory -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#ActionHistory">
+        <rdfs:comment>操作历史</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#Attribute -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#Attribute">
+        <rdfs:comment>属性</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#AttributeVariable -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#AttributeVariable">
+        <rdfs:comment>属性变量</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#Entity -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#Entity">
+        <rdfs:comment>实体</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#Event -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#Event">
+        <rdfs:comment>事件</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#ExecuteCondition -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#ExecuteCondition">
+        <rdfs:comment>执行条件</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#Group -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#Group">
+        <rdfs:comment>组</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#Policy -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#Policy">
+        <rdfs:comment>策略</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#PolicyRule -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#PolicyRule">
+        <rdfs:comment>策略规则</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#Session -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#Session">
+        <rdfs:comment>会话</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#Subject -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#Subject">
+        <rdfs:subClassOf rdf:resource="http://www.bamboocloud.com/ztna.owl#Entity"/>
+        <rdfs:comment>主体</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#Target -->
+
+    <owl:Class rdf:about="http://www.bamboocloud.com/ztna.owl#Target">
+        <rdfs:subClassOf rdf:resource="http://www.bamboocloud.com/ztna.owl#Entity"/>
+        <rdfs:comment>客体</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

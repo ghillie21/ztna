@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.bamboocloud.com/ztna.owl#"
+     xml:base="http://www.bamboocloud.com/ztna.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.bamboocloud.com/ztna.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#aComputer -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#aComputer">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#Target"/>
+        <hasTAttribute rdf:resource="http://www.bamboocloud.com/ztna.owl#computerAttribute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#aCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#aCondition">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#ExecuteCondition"/>
+        <hasSCondition rdf:resource="http://www.bamboocloud.com/ztna.owl#userAttribute"/>
+        <hasSECondition rdf:resource="http://www.bamboocloud.com/ztna.owl#phaseAttribute"/>
+        <hasTCondition rdf:resource="http://www.bamboocloud.com/ztna.owl#computerAttribute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#aPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#aPolicy">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#Policy"/>
+        <hasRule rdf:resource="http://www.bamboocloud.com/ztna.owl#aPolicyRule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#aPolicyRule -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#aPolicyRule">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#PolicyRule"/>
+        <hasAction rdf:resource="http://www.bamboocloud.com/ztna.owl#accessAction"/>
+        <hasCondition rdf:resource="http://www.bamboocloud.com/ztna.owl#aCondition"/>
+        <hasSubject rdf:resource="http://www.bamboocloud.com/ztna.owl#aUser"/>
+        <hasTarget rdf:resource="http://www.bamboocloud.com/ztna.owl#aComputer"/>
+        <decisionStrategy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</decisionStrategy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#aSession -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#aSession">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#Session"/>
+        <hasAction rdf:resource="http://www.bamboocloud.com/ztna.owl#accessAction"/>
+        <hasSubject rdf:resource="http://www.bamboocloud.com/ztna.owl#aUser"/>
+        <hasTarget rdf:resource="http://www.bamboocloud.com/ztna.owl#aComputer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#aUser -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#aUser">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#Subject"/>
+        <hasSAttribute rdf:resource="http://www.bamboocloud.com/ztna.owl#userAttribute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#accessAction -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#accessAction">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#Action"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">访问</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#computerAttribute -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#computerAttribute">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#Attribute"/>
+        <hasAttributeVariable rdf:resource="http://www.bamboocloud.com/ztna.owl#computerName"/>
+        <hasAttributeVariable rdf:resource="http://www.bamboocloud.com/ztna.owl#computerTypeServer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#computerName -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#computerName">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#AttributeVariable"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">名称</name>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">计算机</value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#computerTypeServer -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#computerTypeServer">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#AttributeVariable"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">类型</name>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">服务器</value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#eTime -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#eTime">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#AttributeVariable"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">结束时刻</name>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17:00</value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#phaseAttribute -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#phaseAttribute">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#Attribute"/>
+        <hasAttributeVariable rdf:resource="http://www.bamboocloud.com/ztna.owl#eTime"/>
+        <hasAttributeVariable rdf:resource="http://www.bamboocloud.com/ztna.owl#sTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#sTime -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#sTime">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#AttributeVariable"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">开始时刻</name>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8:00</value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#userAttribute -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#userAttribute">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#Attribute"/>
+        <hasAttributeVariable rdf:resource="http://www.bamboocloud.com/ztna.owl#userName"/>
+        <hasAttributeVariable rdf:resource="http://www.bamboocloud.com/ztna.owl#userRoleWorker"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#userName -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#userName">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#AttributeVariable"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">用户名</name>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">张三</value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bamboocloud.com/ztna.owl#userRoleWorker -->
+
+    <owl:NamedIndividual rdf:about="http://www.bamboocloud.com/ztna.owl#userRoleWorker">
+        <rdf:type rdf:resource="http://www.bamboocloud.com/ztna.owl#AttributeVariable"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">角色</name>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">worker</value>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,29 @@
+@prefix ztna: <http://www.bamboocloud.com/ztna.owl#> .
+@include <RDFS>.
+@include <OWL>.
+[allowWorkerAccessServerInAPeriod:
+(?aSession rdf:type ztna:Session),
+
+(?aSession ztna:hasSubject ?aUser),
+(?aUser rdf:type ztna:Subject),
+(?aUser ztna:hasSAttribute ?userAttribute),
+(?userAttribute rdf:type ztna:Attribute),
+(?userAttribute ztna:hasAttributeVariable ?userRoleWorker),
+(?userRoleWorker rdf:type ztna:AttributeVariable),
+(?userRoleWorker ztna:name "角色"^^xsd:string),
+(?userRoleWorker ztna:value "worker"^^xsd:string),
+
+(?aSession ztna:hasTarget ?aComputer),
+(?aComputer rdf:type ztna:Target),
+(?aComputer ztna:hasTAttribute ?computerAttribute),
+(?computerAttribute rdf:type ztna:Attribute),
+(?computerAttribute ztna:hasAttributeVariable ?computerTypeServer),
+(?computerTypeServer rdf:type ztna:AttributeVariable),
+(?computerTypeServer ztna:name "类型"^^xsd:string),
+(?computerTypeServer ztna:value "服务器"^^xsd:string),
+
+(?aSession ztna:hasAction ?accessAction),
+(?accessAction rdf:type ztna:Action),
+
+->(ztna:aPolicy ztna:decisionEffect "true"^^xsd:boolean)
+]
