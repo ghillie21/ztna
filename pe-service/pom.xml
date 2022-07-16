@@ -20,10 +20,6 @@
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
     </dependency>
-    <!-- <dependency>
-         <groupId>com.ghillie.am</groupId>
-         <artifactId>bam-authprocess</artifactId>
-     </dependency>-->
 
     <dependency>
       <groupId>com.alibaba.csp</groupId>
@@ -90,13 +86,6 @@
       <artifactId>mysql-connector-java</artifactId>
       <scope>runtime</scope>
     </dependency>
-
-    <!--<dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <optional>true</optional>
-    </dependency>-->
-
     <dependency>
       <groupId>com.google.zxing</groupId>
       <artifactId>core</artifactId>
@@ -121,20 +110,10 @@
         </exclusion>
       </exclusions>
     </dependency>
-
-
-
-    <!--<dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-gateway</artifactId>
-    </dependency>-->
-
-    <!--<dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>druid-spring-boot-starter</artifactId>
-      <version>1.1.10</version>
-    </dependency>-->
-
+      <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+      </dependency>
   </dependencies>
 
   <build>
